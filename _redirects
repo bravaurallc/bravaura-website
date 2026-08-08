@@ -1,0 +1,5 @@
+# Serve images/assets normally so the logo loads
+/assets/*   /assets/:splat   200
+
+# Everything else shows the Coming Soon page (hides all real pages while we finish)
+/*          /index.html      200!
