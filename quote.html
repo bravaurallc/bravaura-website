@@ -4,215 +4,168 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Get a Quote | Bravaura LLC Art Events NJ</title>
-<meta name="description" content="Estimate your Bravaura art event in seconds — birthday parties, paint & sip, corporate, face painting, and master classes across New Jersey. Then request an exact quote.">
+<meta name="description" content="Request a custom, all-inclusive quote for your Bravaura art event in New Jersey: birthday parties, paint & sip, corporate, face painting, and painting lessons. Reply within 24 hours.">
+<link rel="canonical" href="https://bravaurallc.com/quote.html">
 <meta property="og:title" content="Get a Quote | Bravaura LLC Art Events NJ">
-<meta property="og:description" content="Estimate your Bravaura art event in seconds — birthday parties, paint & sip, corporate, face painting, and master classes across New Jersey. Then request an exact quote.">
+<meta property="og:description" content="Request a custom, all-inclusive quote for your Bravaura art event in New Jersey: birthday parties, paint & sip, corporate, face painting, and painting lessons. Reply within 24 hours.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://bravaurallc.com/quote.html">
+<meta property="og:site_name" content="Bravaura LLC">
+<meta property="og:image" content="https://bravaurallc.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Bravaura LLC — mobile art parties in New Jersey">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get a Quote | Bravaura LLC Art Events NJ">
+<meta name="twitter:description" content="Request a custom, all-inclusive quote for your Bravaura art event in New Jersey: birthday parties, paint & sip, corporate, face painting, and painting lessons. Reply within 24 hours.">
+<meta name="twitter:image" content="https://bravaurallc.com/assets/og-image.jpg">
 <link rel="icon" type="image/png" href="assets/bravaura-logo-final.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,WONK@0,9..144,400,0;0,9..144,500,0;0,9..144,600,0;0,9..144,700,0;1,9..144,500,0&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
 <hr class="sweep-bar">
 <header class="site-header">
   <div class="container nav">
-    <a href="index.html" class="brand" aria-label="Bravaura LLC home">
-      <img src="assets/bravaura-logo-final.png" alt="Bravaura LLC logo">
-    </a>
-    <nav aria-label="Main">
-      <ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
-    </nav>
+    <a href="index.html" class="brand" aria-label="Bravaura LLC home"><img src="assets/bravaura-logo-final.png" alt="Bravaura LLC logo"></a>
+    <nav aria-label="Main"><ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn--gold">Book Now</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="contact.html" class="btn btn--gold">Book a date</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
 <main>
 
 <section class="page-hero">
-  <div class="container page-hero-inner">
-    <p class="eyebrow">Get a Quote</p>
-    <h1>Build your estimate</h1>
-    <p class="lead">Pick your event, add the size and location, and get a ballpark on the spot. Ready to book? Send it over and we'll confirm an exact, all-inclusive price within 24 hours.</p>
+  <div class="container">
+    <span class="eyebrow">get a quote</span>
+    <span class="script-accent">No guessing games.</span><h1>Tell us about your event</h1>
+    <p class="lead">Give us the basics and we'll send an exact, all-inclusive quote within 24 hours. Not sure on the details yet? Send what you've got and we'll help you figure it out.</p>
+    
   </div>
 </section>
+
 
 <section class="section">
+  <div class="container split" style="align-items:start;gap:44px">
+    <div class="reveal"><div class="form-card">
+        <h2 class="mt-0" style="font-size:1.7rem">Request your quote</h2>
+        <p style="color:var(--body)">Tell us a little about your event and we'll take it from there.</p>
+        <form data-bravaura-form name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="quote-request">
+          <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+          <div class="form-grid">
+            <div class="field"><label for="name">Name <span class="req">*</span></label><input id="name" name="name" type="text" required autocomplete="name"></div>
+            <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="event_type">Event type <span class="req">*</span></label>
+              <select id="event_type" name="event_type" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>Birthday Party</option><option>Paint &amp; Sip</option>
+                <option>Corporate &amp; Team Night</option><option>Face Painting</option>
+                <option>Master Class</option><option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="event_date">Preferred date</label><input id="event_date" name="event_date" type="date"></div>
+            <div class="field"><label for="group_size">Group size</label><input id="group_size" name="group_size" type="number" min="1" placeholder="e.g. 12"></div>
+            <div class="field"><label for="nonprofit">Are you a non-profit?</label>
+              <select id="nonprofit" name="nonprofit">
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>No</option>
+                <option>Yes &mdash; we're a non-profit</option>
+                <option>Yes &mdash; a school or PTA</option>
+              </select>
+            </div>
+            <div class="field full"><label for="location">Event location — town / venue / ZIP <span class="req">*</span></label><input id="location" name="location" type="text" placeholder="e.g. Flemington, NJ 08822" required></div>
+            <div class="field full"><label for="setting">Is your event indoors or outdoors? <span class="req">*</span></label>
+              <select id="setting" name="setting" required>
+                <option value="" disabled selected>Choose one&hellip;</option>
+                <option>Indoors</option>
+                <option>Outdoors</option>
+                <option>A bit of both</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <span class="field-label">Will you need a tent, tables, or chairs?</span>
+              <div class="check-row">
+                <label class="check"><input type="checkbox" name="setup_needs" value="Tent"> Tent</label>
+                <label class="check"><input type="checkbox" name="setup_needs" value="Tables"> Tables</label>
+                <label class="check"><input type="checkbox" name="setup_needs" value="Chairs"> Chairs</label>
+              </div>
+              <small class="field-hint">Check any you'd like us to bring, or leave them all blank if you're covered. These carry an extra fee, included in your quote.</small>
+            </div>
+            <div class="field full"><label for="message">Anything you're picturing?</label><textarea id="message" name="message" placeholder="The occasion, the vibe, add-ons, or any questions."></textarea></div>
+          </div>
+          <div style="margin-top:20px"><button type="submit" class="btn btn--gold btn--lg">Send my request</button></div>
+          <div class="form-status" role="status" aria-live="polite"></div>
+          <p class="form-note">Non-profits, schools, and PTAs get a reduced rate, so tell us your budget and we'll work with you. Your info is only used to plan your event, never shared.</p>
+        </form>
+      </div></div>
+    <div class="reveal d1">
+      <span class="eyebrow">what to expect</span>
+      <h2>Here's what happens next.</h2>
+      <ul class="checklist">
+        <li>We read your details and put together an exact, all-inclusive price.</li>
+        <li>You get a reply by email. No pressure, no obligation.</li>
+        <li>Love it? A deposit reserves your date and we start planning the fun part.</li>
+      </ul>
+      <div class="info-card reveal d2" style="margin-top:26px">
+        <h3 class="mt-0">Prefer to talk it through?</h3>
+        <p class="mb-0">Call or text <a href="tel:9088943611" style="font-weight:700">908-894-3611</a>, or email <a href="mailto:info@bravaurallc.com" style="font-weight:700">info@bravaurallc.com</a>. We'd love to hear about your event.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
   <div class="container">
-    <div class="split" style="align-items:start;gap:44px;">
-      <div class="form-card">
-        <h2 class="mt-0" style="font-size:1.6rem;">Your event</h2>
-        <div class="form-grid">
-          <div class="field full">
-            <label for="q-service">Service <span class="req">*</span></label>
-            <select id="q-service">
-              <option value="" disabled selected>Choose one…</option>
-              <option value="birthday">Birthday Party</option>
-              <option value="paintsip">Paint &amp; Sip</option>
-              <option value="corporate">Corporate Team Building</option>
-              <option value="face">Face Painting</option>
-              <option value="master">Master Class</option>
-            </select>
-          </div>
-          <div class="field" id="q-people-wrap">
-            <label for="q-people">How many people?</label>
-            <input id="q-people" type="number" min="1" inputmode="numeric" placeholder="e.g. 12">
-          </div>
-          <div class="field" id="q-hours-wrap" style="display:none;">
-            <label for="q-hours">How many hours? <span style="font-weight:500;color:var(--cool-gray);">(2-hour minimum)</span></label>
-            <input id="q-hours" type="number" min="2" step="0.5" inputmode="decimal" placeholder="e.g. 2">
-          </div>
-          <div class="field full">
-            <label for="q-location">Your location</label>
-            <select id="q-location">
-              <option value="local" selected>Local — within ~30 minutes of us ($25 travel)</option>
-              <option value="far">Farther than 30 minutes away</option>
-            </select>
-          </div>
-          <div class="field full" id="q-miles-wrap" style="display:none;">
-            <label for="q-miles">About how many miles from us?</label>
-            <input id="q-miles" type="number" min="1" inputmode="numeric" placeholder="e.g. 25">
-          </div>
-          <div class="field full">
-            <label for="q-town">Town / venue (optional)</label>
-            <input id="q-town" type="text" placeholder="City or venue in NJ">
-          </div>
-          <div class="field full" id="q-addons-wrap" style="display:none;">
-            <label>Want any add-ons?</label>
-            <p class="mb-0" style="color:#4a5763;font-size:0.92rem;">Decorations, goodie bags, a slime table, glow-in-the-dark painting, and games can all be added on — priced per event. Mention what you'd like when you request your quote.</p>
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div class="card" style="border-top:5px solid var(--gold);">
-          <p class="eyebrow" style="margin-bottom:6px;">Your estimate</p>
-          <div id="q-amount" style="font-family:var(--font-display);font-size:2.1rem;font-weight:600;color:var(--deep-blue);line-height:1.12;">Pick a service to start</div>
-          <div id="q-breakdown" style="color:#4a5763;margin-top:10px;font-size:0.98rem;line-height:1.5;"></div>
-          <a href="contact.html" class="btn btn--gold btn--lg" style="margin-top:18px;">Request This Quote</a>
-          <p class="form-note" id="q-note" style="margin-top:14px;">Ballpark only — your final, all-inclusive quote is confirmed by us within 24 hours.</p>
-        </div>
-        <div class="card" style="margin-top:20px;background:var(--mist);border:none;">
-          <h3 class="mt-0" style="font-size:1.1rem;">Good to know</h3>
-          <p class="mb-0" style="color:#4a5763;font-size:0.96rem;">Every estimate covers setup, instruction, and cleanup. A $100 non-refundable deposit secures your date; the balance is due at or before the event. Pay by card, check, Venmo, or PayPal.</p>
-        </div>
-      </div>
+    <span class="script-accent">Prefer we just handle it?</span>
+    <h2>Reach out and we'll take it from here.</h2>
+    <p>Tell us the occasion and we'll send a custom quote within 24 hours.</p>
+    <div class="btn-row" style="justify-content:center">
+      <a href="contact.html" class="btn btn--gold btn--lg">Contact us</a>
+      <a href="services.html" class="btn btn--white btn--lg">Browse services</a>
     </div>
   </div>
 </section>
-<section class="section cta-band">
-  <div class="container center">
-    <h2>Prefer we just handle it?</h2>
-    <p class="lead" style="margin:0 auto 1.8rem;">Skip the estimator — tell us about your event and we'll send a custom, all-inclusive quote within 24 hours.</p>
-    <div class="btn-row" style="justify-content:center;">
-      <a href="contact.html" class="btn btn--gold btn--lg">Contact Us</a>
-      <a href="services.html" class="btn btn--white btn--lg">Browse Services</a>
-    </div>
-  </div>
-</section>
-<script>
-(function(){
-  // ----- Editable rates (change these anytime) -----
-  var RATES = { birthday: 40, paintsip: 40, corporate: 45 };  // per person, base rate
-  var CORPORATE_MIN = 10;               // corporate 10-person minimum
-  // Volume discount: people 1-12 at the base rate, people 13-15 at $4 off,
-  // people 16+ at $6 off. Applies per added person, not the whole group.
-  var TIER1_CUTOFF = 12, TIER2_CUTOFF = 15, TIER2_OFF = 4, TIER3_OFF = 6;
-  var FACE_RATE = 135, FACE_MIN_HOURS = 2;  // face painting per hour + minimum booking
-  // Travel: $25 flat if local (<=30 min). Farther than 30 min: $60 base,
-  // +$10 for every additional 5 miles beyond LOCAL_MILES.
-  var TRAVEL_LOCAL = 25, TRAVEL_FAR_BASE = 60, TRAVEL_PER_5MI = 10, LOCAL_MILES = 15;
-  // -------------------------------------------------
-  var svc = document.getElementById('q-service');
-  if(!svc) return;
-  var people = document.getElementById('q-people');
-  var hours = document.getElementById('q-hours');
-  var loc = document.getElementById('q-location');
-  var miles = document.getElementById('q-miles');
-  var peopleWrap = document.getElementById('q-people-wrap');
-  var hoursWrap = document.getElementById('q-hours-wrap');
-  var milesWrap = document.getElementById('q-miles-wrap');
-  var addonsWrap = document.getElementById('q-addons-wrap');
-  var amount = document.getElementById('q-amount');
-  var breakdown = document.getElementById('q-breakdown');
-  var note = document.getElementById('q-note');
-
-  function money(n){ return '$' + Math.round(n).toLocaleString(); }
-
-  function tieredCost(p, rate){
-    var t1 = Math.min(p, TIER1_CUTOFF);
-    var t2 = Math.max(0, Math.min(p, TIER2_CUTOFF) - TIER1_CUTOFF);
-    var t3 = Math.max(0, p - TIER2_CUTOFF);
-    var total = t1 * rate + t2 * (rate - TIER2_OFF) + t3 * (rate - TIER3_OFF);
-    var parts = [t1 + ' &times; $' + rate];
-    if(t2 > 0) parts.push(t2 + ' &times; $' + (rate - TIER2_OFF));
-    if(t3 > 0) parts.push(t3 + ' &times; $' + (rate - TIER3_OFF));
-    return { total: total, line: parts.join(' + ') };
-  }
-
-  function travelFee(){
-    if(loc.value !== 'far') return TRAVEL_LOCAL;
-    var mi = parseFloat(miles.value) || LOCAL_MILES;
-    var extra = Math.max(0, mi - LOCAL_MILES);
-    return TRAVEL_FAR_BASE + Math.ceil(extra / 5) * TRAVEL_PER_5MI;
-  }
-
-  function render(){
-    var s = svc.value;
-    milesWrap.style.display = (loc.value === 'far') ? '' : 'none';
-    var travel = travelFee();
-    var travelLine = '<br>+ travel fee ' + money(travel) + (loc.value === 'far' ? ' (over 30 min out)' : ' (local)');
-    hoursWrap.style.display = (s === 'face') ? '' : 'none';
-    peopleWrap.style.display = (s === 'face') ? 'none' : '';
-    addonsWrap.style.display = (s === 'birthday') ? '' : 'none';
-    note.textContent = 'Ballpark only — your final, all-inclusive quote is confirmed by us by email.';
-
-    if(s === 'birthday' || s === 'paintsip' || s === 'corporate'){
-      var rate = RATES[s];
-      var p = parseInt(people.value, 10);
-      if(!p || p < 1){ amount.textContent = 'Add your headcount'; breakdown.textContent = 'Starts at $' + rate + ' per person, with a discount once your group passes ' + TIER1_CUTOFF + '.' + (s === 'corporate' ? ' (' + CORPORATE_MIN + '-person minimum.)' : ''); return; }
-      var billedP = (s === 'corporate' && p < CORPORATE_MIN) ? CORPORATE_MIN : p;
-      var pc = tieredCost(billedP, rate);
-      var total = pc.total + travel;
-      amount.textContent = '~ ' + money(total);
-      var minNote = (s === 'corporate' && p < CORPORATE_MIN) ? ' (10-person minimum applied)' : '';
-      breakdown.innerHTML = billedP + ' people' + minNote + ': ' + pc.line + ' = ' + money(pc.total) + travelLine + (s === 'birthday' ? '<br>Add-ons (decorations, goodie bags, etc.) priced separately.' : '');
-    } else if(s === 'face'){
-      var h = parseFloat(hours.value);
-      if(!h || h < 1){ amount.textContent = 'Add your hours'; breakdown.textContent = '$' + FACE_RATE + '/hour, ' + FACE_MIN_HOURS + '-hour minimum.'; return; }
-      var billedH = Math.max(h, FACE_MIN_HOURS);
-      var base2 = billedH * FACE_RATE, total2 = base2 + travel;
-      amount.textContent = '~ ' + money(total2);
-      var hrNote = (h < FACE_MIN_HOURS) ? ' (' + FACE_MIN_HOURS + '-hour minimum applied)' : '';
-      breakdown.innerHTML = billedH + ' hr' + hrNote + ' &times; $' + FACE_RATE + ' = ' + money(base2) + travelLine;
-    } else if(s === 'master'){
-      amount.textContent = "Let's customize it";
-      breakdown.innerHTML = 'Master classes are quoted per event. Send your details and we&rsquo;ll reply with an exact price.';
-    } else {
-      amount.textContent = 'Pick a service to start';
-      breakdown.textContent = '';
-    }
-  }
-  [svc, people, hours, loc, miles].forEach(function(el){
-    el.addEventListener('input', render);
-    el.addEventListener('change', render);
-  });
-  render();
-})();
-</script>
 
 </main>
+<section class="signup" id="signup">
+  <div class="container">
+    <div class="signup-card reveal">
+      <div>
+        <h2>Want to join our email list?</h2>
+        <p>New events, seasonal classes, and open dates, sent about <strong>once a month</strong>. Sometimes less.</p>
+      </div>
+      <div>
+        <form data-bravaura-form name="email-signup" method="post" novalidate
+              action="https://app.kit.com/forms/9788191/subscriptions"
+              data-endpoint="https://app.kit.com/forms/9788191/subscriptions"
+              data-sv-form="9788191" data-uid="bdd7f90ec0"
+              data-success="Thanks for joining! Check your email for a confirmation link. One click and you're on the list.">
+          <div class="signup-row">
+            <label for="signup-email" class="sr-only">Email address</label>
+            <input id="signup-email" name="email_address" type="email" required placeholder="you@email.com" autocomplete="email">
+            <button type="submit" class="btn btn--purple">Join the list</button>
+          </div>
+          <span class="signup-fine">Unsubscribe any time. We never share or sell your address.</span>
+          <div class="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo-chip"><img src="assets/bravaura-logo-final.png" alt="Bravaura LLC"></span>
-        <p>Mobile art events across New Jersey. We bring everything. You just create.</p>
+        <img src="assets/bravaura-logo-final.png" alt="Bravaura LLC">
+        <p>Mobile art parties across New Jersey. We bring everything.</p>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
@@ -221,8 +174,8 @@
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="quote.html">Quote Estimator</a></li>
           <li><a href="faq.html">FAQ</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
           <li><a href="contact.html">Book an Event</a></li>
         </ul>
       </div>
@@ -230,18 +183,29 @@
         <h4>Get in Touch</h4>
         <ul>
           <li><a href="tel:9088943611">908-894-3611</a></li>
-          <li><a href="mailto:bravaurallc@gmail.com">bravaurallc@gmail.com</a></li>
+          <li><a href="mailto:info@bravaurallc.com">info@bravaurallc.com</a></li>
           <li><a href="https://instagram.com/bravaurallc" target="_blank" rel="noopener">@bravaurallc</a></li>
-          <li>Serving all of NJ, incl. Hunterdon &amp; Mercer County</li>
+          <li>Serving New Jersey and surrounding areas</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>&copy; <span id="year">2026</span> Bravaura LLC. All rights reserved.</span>
-      <span>Art Without the Stress.</span>
     </div>
   </div>
 </footer>
+<div id="promo-pop" role="dialog" aria-modal="true" aria-labelledby="promo-title" aria-hidden="true">
+  <div class="promo-card">
+    <button class="promo-close" type="button" aria-label="Close">&times;</button>
+    <span class="promo-kicker">save the date</span>
+    <h3 id="promo-title">Olipop &amp; Paint</h3>
+    <p class="promo-when">Saturday, September 12 &middot; 5:00&ndash;7:00 pm</p>
+    <p class="promo-where">Livi's Lavender Farm &middot; Robbinsville, NJ</p>
+    <p class="promo-more">more details coming soon!</p>
+    
+    <a href="#signup" class="btn btn--purple btn--lg promo-cta">Get the details first</a>
+  </div>
+</div>
 <script src="js/main.js"></script>
 </body>
 </html>
