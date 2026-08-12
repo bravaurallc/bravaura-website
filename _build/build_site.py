@@ -63,7 +63,9 @@ def icon(name):
     return ICONS.get(name, "")
 
 SITE_URL = "https://bravaurallc.com"   # used for canonical + social preview tags
-EVENTBRITE_URL = ""   # Olipop & Paint tickets — paste the Eventbrite link here and rebuild
+FORM_EMAIL = "bravaurallc@gmail.com"   # quote/contact forms email straight here via FormSubmit (free, no account)
+TICKETS_URL = "https://square.link/u/ehouc1P7"   # Olipop & Paint tickets (Square)
+FLYER_IMG   = "assets/olipop-paint-flyer.jpg"    # drop the flyer here; popup hides the image if missing
 
 # ---------------------------------------------------------------- testimonials
 TESTIMONIALS = [
@@ -385,15 +387,22 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 #promo-pop{position:fixed;inset:0;z-index:900;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(30,42,56,.55);backdrop-filter:blur(3px);opacity:0;transition:opacity .3s ease}
 #promo-pop.on{display:flex}
 #promo-pop.in{opacity:1}
-.promo-card{position:relative;max-width:520px;width:100%;background:var(--gold);color:var(--ink);border:3px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);padding:38px 34px 32px;text-align:center;transform:translateY(14px) scale(.97);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.promo-card{position:relative;max-width:760px;width:100%;max-height:88vh;overflow-y:auto;background:var(--gold);color:var(--ink);border:3px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);padding:30px;text-align:center;display:flex;gap:26px;align-items:center;transform:translateY(14px) scale(.97);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.promo-flyer{flex:0 0 42%;max-width:42%}
+.promo-flyer img{width:100%;max-width:212px;display:block;margin:0 auto;border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink)}
+.promo-body{flex:1 1 auto;min-width:0}
+.promo-note{font-size:.95rem;margin:12px 0 0;line-height:1.5}
+.promo-early{font-size:.92rem;font-weight:700;margin:12px 0 18px;padding:9px 12px;background:rgba(255,255,255,.55);border-radius:10px}
+@media(max-width:660px){.promo-card{flex-direction:column;gap:18px;padding:26px 20px}.promo-flyer{flex:0 0 auto;max-width:64%}}
 #promo-pop.in .promo-card{transform:none}
 .promo-card::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--teal);opacity:.35;top:-46px;left:-40px;z-index:0}
 .promo-card>*{position:relative;z-index:1}
 .promo-kicker{font-family:var(--font-hand);font-weight:700;font-size:1.7rem;color:var(--purple);line-height:1;display:block;margin-bottom:6px}
-.promo-card h3{font-size:2.1rem;margin:0 0 4px;line-height:1.05}
+.promo-card h3{font-size:1.9rem;margin:0 0 4px;line-height:1.05}
 .promo-when{font-weight:700;font-size:1.18rem;margin:14px 0 2px}
 .promo-where{font-size:1.02rem;margin:0 0 4px}
-.promo-more{font-family:var(--font-hand);font-weight:700;font-size:1.3rem;color:var(--ink);margin:16px 0 20px}
+.promo-cta{margin-top:6px}
+.promo-body .btn{width:100%;justify-content:center;margin-top:8px}
 .promo-close{position:absolute;top:10px;right:12px;z-index:2;background:transparent;border:0;font-size:1.9rem;line-height:1;cursor:pointer;color:var(--ink);padding:6px 10px;border-radius:10px}
 .promo-close:hover{background:rgba(30,42,56,.12)}
 @media(max-width:560px){.promo-card{padding:34px 22px 26px}.promo-card h3{font-size:1.7rem}}
@@ -737,19 +746,27 @@ def signup_band():
 
 # Promo popup — Olipop & Paint, Sept 12 2026. Auto-hides on Sept 11 (see PROMO_END in main.js).
 def promo_popup():
-    tickets=(f'<a href="{EVENTBRITE_URL}" target="_blank" rel="noopener" '
-             f'class="btn btn--purple btn--lg promo-cta">Purchase tickets</a>') if EVENTBRITE_URL else ''
-    secondary_cls='btn btn--white btn--lg' if EVENTBRITE_URL else 'btn btn--purple btn--lg'
+    tickets=(f'<a href="{TICKETS_URL}" target="_blank" rel="noopener" '
+             f'class="btn btn--purple btn--lg promo-cta">Buy tickets</a>') if TICKETS_URL else ''
+    secondary_cls='btn btn--white promo-cta' if TICKETS_URL else 'btn btn--purple btn--lg promo-cta'
+    flyer=(f'<div class="promo-flyer"><a href="{FLYER_IMG}" target="_blank" rel="noopener" '
+           f'title="Open the full flyer"><img src="{FLYER_IMG}" alt="Olipop &amp; Paint flyer: Saturday September 12 2026, '
+           f'5 to 7pm at Livi\'s Lavender Farm, Robbinsville NJ. Tickets $65 per person." loading="lazy" '
+           f'onerror="this.closest(\'.promo-flyer\').remove()"></a></div>') if FLYER_IMG else ''
     return f'''<div id="promo-pop" role="dialog" aria-modal="true" aria-labelledby="promo-title" aria-hidden="true">
   <div class="promo-card">
     <button class="promo-close" type="button" aria-label="Close">&times;</button>
-    <span class="promo-kicker">save the date</span>
-    <h3 id="promo-title">Olipop &amp; Paint</h3>
-    <p class="promo-when">Saturday, September 12 &middot; 5:00&ndash;7:00 pm</p>
-    <p class="promo-where">Livi\'s Lavender Farm &middot; Robbinsville, NJ</p>
-    <p class="promo-more">more details coming soon!</p>
-    {tickets}
-    <a href="#signup" class="{secondary_cls} promo-cta">Get the details first</a>
+    {flyer}
+    <div class="promo-body">
+      <span class="promo-kicker">save the date</span>
+      <h3 id="promo-title">Olipop &amp; Paint</h3>
+      <p class="promo-when">Saturday, September 12 &middot; 5:00&ndash;7:00 pm</p>
+      <p class="promo-where">Livi\'s Lavender Farm &middot; Robbinsville, NJ</p>
+      <p class="promo-note">A lavender-themed painting, step by step. All supplies included, plus a lavender sachet fresh from the farm. All ages, no experience needed.</p>
+      <p class="promo-early">Early bird: 15% off with code <b>EARLYBIRD15</b> until Aug 23</p>
+      {tickets}
+      <a href="#signup" class="{secondary_cls}">Get event updates</a>
+    </div>
   </div>
 </div>'''
 
@@ -1194,8 +1211,7 @@ print("home + services done")
 # ================================================================ GALLERY
 # NOTE: Kendal's headshot and the celestial/"galaxy" painting were removed (looked too AI).
 # Add a fresh "kids holding up their paintings" shot here once generated/chosen.
-GALLERY=[(IMG_LAKE,"A ladies' night paint & sip on the lake"),
-         ("36a659d6-0a8f-4dea-8e96-3164406b2a43","Kids holding up their finished paintings at a Bravaura art party")]
+GALLERY=[(IMG_LAKE,"A ladies' night paint & sip on the lake")]
 def gallery_grid():
     items=""
     for pid,alt in GALLERY:
@@ -1296,9 +1312,14 @@ def booking_form(name="quote-request", heading="Request a quote", note_extra="")
     return f'''<div class="form-card">
         <h2 class="mt-0" style="font-size:1.7rem">{heading}</h2>
         <p style="color:var(--body)">Tell us a little about your event and we'll take it from there.</p>
-        <form data-bravaura-form name="{name}" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
-          <input type="hidden" name="form-name" value="{name}">
-          <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+        <form data-bravaura-form name="{name}" method="POST" novalidate
+              action="https://formsubmit.co/{FORM_EMAIL}"
+              data-endpoint="https://formsubmit.co/ajax/{FORM_EMAIL}">
+          <input type="hidden" name="_subject" value="Bravaura website: {heading}">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="{SITE_URL}/thank-you.html">
+          <p style="display:none"><label>Leave this empty: <input name="_honey"></label></p>
           <div class="form-grid">
             <div class="field"><label for="name">Name <span class="req">*</span></label><input id="name" name="name" type="text" required autocomplete="name"></div>
             <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
@@ -1439,6 +1460,15 @@ faq_body=f'''
 page("faq.html","FAQ | Bravaura LLC Mobile Art Events NJ",
      "Answers to common questions about Bravaura's mobile art events in New Jersey — travel, skill levels, customization, pricing, and cancellations.",
      "faq.html",faq_body)
+
+thanks_body=f'''
+{page_hero("thank you","Your request is in",
+  "Thanks for reaching out. We read every message and reply by email within 24 hours with a custom, all-inclusive quote and next steps.",
+  script="Talk soon.", cta_btn=("Back to the site","index.html"))}
+'''
+page("thank-you.html","Thank You | Bravaura LLC",
+     "Thanks for your request. Bravaura replies by email within 24 hours with a custom quote for your New Jersey art event.",
+     "", thanks_body)
 
 write_assets()
 write_seo_files()

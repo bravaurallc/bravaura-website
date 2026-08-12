@@ -310,15 +310,22 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 #promo-pop{position:fixed;inset:0;z-index:900;display:none;align-items:center;justify-content:center;padding:22px;background:rgba(30,42,56,.55);backdrop-filter:blur(3px);opacity:0;transition:opacity .3s ease}
 #promo-pop.on{display:flex}
 #promo-pop.in{opacity:1}
-.promo-card{position:relative;max-width:520px;width:100%;background:var(--gold);color:var(--ink);border:3px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);padding:38px 34px 32px;text-align:center;transform:translateY(14px) scale(.97);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.promo-card{position:relative;max-width:760px;width:100%;max-height:88vh;overflow-y:auto;background:var(--gold);color:var(--ink);border:3px solid var(--ink);border-radius:24px;box-shadow:10px 10px 0 var(--ink);padding:30px;text-align:center;display:flex;gap:26px;align-items:center;transform:translateY(14px) scale(.97);transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.promo-flyer{flex:0 0 42%;max-width:42%}
+.promo-flyer img{width:100%;max-width:212px;display:block;margin:0 auto;border:3px solid var(--ink);border-radius:12px;box-shadow:5px 5px 0 var(--ink)}
+.promo-body{flex:1 1 auto;min-width:0}
+.promo-note{font-size:.95rem;margin:12px 0 0;line-height:1.5}
+.promo-early{font-size:.92rem;font-weight:700;margin:12px 0 18px;padding:9px 12px;background:rgba(255,255,255,.55);border-radius:10px}
+@media(max-width:660px){.promo-card{flex-direction:column;gap:18px;padding:26px 20px}.promo-flyer{flex:0 0 auto;max-width:64%}}
 #promo-pop.in .promo-card{transform:none}
 .promo-card::before{content:"";position:absolute;width:120px;height:120px;border-radius:50%;background:var(--teal);opacity:.35;top:-46px;left:-40px;z-index:0}
 .promo-card>*{position:relative;z-index:1}
 .promo-kicker{font-family:var(--font-hand);font-weight:700;font-size:1.7rem;color:var(--purple);line-height:1;display:block;margin-bottom:6px}
-.promo-card h3{font-size:2.1rem;margin:0 0 4px;line-height:1.05}
+.promo-card h3{font-size:1.9rem;margin:0 0 4px;line-height:1.05}
 .promo-when{font-weight:700;font-size:1.18rem;margin:14px 0 2px}
 .promo-where{font-size:1.02rem;margin:0 0 4px}
-.promo-more{font-family:var(--font-hand);font-weight:700;font-size:1.3rem;color:var(--ink);margin:16px 0 20px}
+.promo-cta{margin-top:6px}
+.promo-body .btn{width:100%;justify-content:center;margin-top:8px}
 .promo-close{position:absolute;top:10px;right:12px;z-index:2;background:transparent;border:0;font-size:1.9rem;line-height:1;cursor:pointer;color:var(--ink);padding:6px 10px;border-radius:10px}
 .promo-close:hover{background:rgba(30,42,56,.12)}
 @media(max-width:560px){.promo-card{padding:34px 22px 26px}.promo-card h3{font-size:1.7rem}}
