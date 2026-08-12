@@ -661,18 +661,18 @@ def header(active):
 
 # Aug 11 2026: all 12 re-shot against a real canvas-tarp backdrop (was a flat digital white void)
 DESIGNS=[
- ("d4ffbed0-1578-40e8-a3f8-d0880d367a5d","Moonlit Lake"),
- ("748a2899-6878-48e7-8b92-d8ec9be082b0","Sunset Palms"),
- ("f1a25cc4-2674-4cb9-8c90-40576abd7789","Sunflowers"),
- ("0a629213-7525-4f6e-bd45-a35bfeae76f6","Wildflower Jar"),
- ("cb88eb5c-40d1-4adf-b72b-996b302596d7","Lavender Field"),
- ("45138e1c-49ff-41d4-bbe6-1deb6dca18f5","Jellyfish"),
- ("f13e970a-e27c-4b48-b6b6-38eea153dc2a","Highland Cow"),
- ("dbc1e82a-35cc-4091-9bde-c6d88a87ba82","Heart Tree"),
- ("bc22c215-787e-46a2-803f-c0d3aaf3600b","Cats on a Fence"),
- ("bd989501-3c7a-4c6f-a308-3e124fbbc546","Pumpkin Porch"),
- ("6c42af82-c180-4669-8de3-9be2059e7701","Fireworks on the Lake"),
- ("bfced683-653a-4490-a93f-0a99e58c82c9","Red Truck &amp; Tree"),
+ ("636ec2cb-894f-4e73-b875-7303a983d49d","Moonlit Lake"),
+ ("6bfaa3d5-8b2e-48de-8c39-23730e63ecba","Sunset Palms"),
+ ("239e9ed9-daef-439b-8179-56bd9941f7bc","Sunflowers"),
+ ("02c0d1d5-3396-41da-959a-7690e918cd9a","Wildflower Jar"),
+ ("c3edcf2f-636d-4a66-acba-ca772a65a807","Lavender Field"),
+ ("c945c49c-8dd0-45f9-8bbb-cdb0f7b4dfe8","Jellyfish"),
+ ("6a214910-1512-419b-9dc4-b9ab8dd28bb6","Highland Cow"),
+ ("7d943730-29fa-439e-b53c-d5925e3f45a4","Heart Tree"),
+ ("273134df-a5f1-497f-953a-29dc873210ce","Cats on a Fence"),
+ ("06955123-2c89-46d7-ac4e-10f48dedfc14","Pumpkin Porch"),
+ ("4e6b4f39-4279-4b4b-ae93-18bd3a30be8c","Fireworks on the Lake"),
+ ("0b58ef96-2206-4db5-90b8-efe190ababb3","Red Truck &amp; Tree"),
 ]
 # Slight hand-placed tilts so the design menu does not read as 12 identical studio shots.
 TILT=[-1.6, 0.9, -0.5, 1.4, -1.1, 0.6, 1.7, -0.8, 1.0, -1.5, 0.7, -0.4]
@@ -1195,7 +1195,7 @@ print("home + services done")
 # NOTE: Kendal's headshot and the celestial/"galaxy" painting were removed (looked too AI).
 # Add a fresh "kids holding up their paintings" shot here once generated/chosen.
 GALLERY=[(IMG_LAKE,"A ladies' night paint & sip on the lake"),
-         ("b3d117f7-c65f-4be0-ad6c-9602cfa90147","Kids holding up their finished paintings at a Bravaura art party")]
+         ("36a659d6-0a8f-4dea-8e96-3164406b2a43","Kids holding up their finished paintings at a Bravaura art party")]
 def gallery_grid():
     items=""
     for pid,alt in GALLERY:
