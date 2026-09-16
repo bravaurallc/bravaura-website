@@ -21,15 +21,46 @@ IG_URL = "https://instagram.com/bravaurallc"
 # library. Reusing an existing image is free. Swap any ID for a real event
 # photo any time — the layout stays the same.
 ASSET = "https://asset.imagine.art/processed/"
-IMG_HERO      = "1adb03a5-532e-4d76-8b06-ed7f8b91a887"  # kids holding up paintings (Aug 11 2026 — same subject, each canvas a different hand)
-IMG_SIP       = "e4b94598-efc8-4878-b23d-e8183f1097bd"  # ladies' outdoor paint & sip, string lights, same moonlit-lake painting on every canvas
-IMG_BIRTHDAY  = "1d486419-3a55-4b5f-b395-14404fd86123"  # birthday party, mixed ages, sun painting, candid/real style
-IMG_CORP      = "2b45db44-9905-422b-b9c8-bde0577d8afd"  # coworkers painting
-IMG_FACE      = "bcb154fd-48ef-4029-8091-971b9a36416f"  # kids with painted faces
-IMG_MASTER    = "2123a9a1-9e43-479c-bc08-3af6727b57d5"  # master class, seated eye-level angle, no foreground, approved Aug 11 2026
+# ---- REAL event photos (Kendal's own, Sept 2026). Local files in assets/gallery/. ----
+# These replaced the AI-generated placeholders everywhere a real photo existed.
+P_LAV_FIELD   = "assets/gallery/lavender-field-group.jpg"    # guests in the lavender field holding their canvases
+P_LAV_TENT    = "assets/gallery/lavender-tent-table.jpg"     # long purple table under the tent, farm behind
+P_LAV_WIDE    = "assets/gallery/lavender-tent-wide.jpg"      # wider shot of the full tent
+P_LAV_TABLE   = "assets/gallery/lavender-painting-table.jpg" # painting together at the lavender farm
+P_LAV_TEACH   = "assets/gallery/lavender-instructing.jpg"    # instructing at the table
+P_LAV_CANVAS  = "assets/gallery/lavender-canvas-held.jpg"    # finished lavender canvas held up
+P_LAV_PATIO   = "assets/gallery/lavender-canvas-patio.jpg"   # finished lavender canvas on a patio table
+P_BUTTERFLY   = "assets/gallery/butterfly-group.jpg"         # big group holding purple butterfly canvases
+P_BUTTERFLY2  = "assets/gallery/butterfly-group-2.jpg"
+P_INDOOR      = "assets/gallery/indoor-painting.jpg"         # indoor session, guests mid-paint
+P_INDOOR2     = "assets/gallery/indoor-painting-2.jpg"       # indoor session, closer in
+P_TABLE_SETUP = "assets/gallery/table-setup.jpg"             # easels + canvases set up before guests arrive
+P_STUDIO      = "assets/gallery/studio-setup.jpg"            # supplies, sign, sample canvas
+P_CANVAS_BIRD = "assets/gallery/canvas-held-bird.jpg"        # finished canvas held up
+P_TENT_SETUP  = "assets/gallery/tent-setup.jpg"              # setting up the tent
+P_TENT_ROW    = "assets/gallery/lavender-tent-row.jpg"       # long table under the tent, lavender rows behind
+P_TENT_GOLDEN = "assets/gallery/lavender-tent-golden.jpg"    # the tent in the lavender field at golden hour
+P_TABLE_GROUP = "assets/gallery/indoor-table-group.jpg"      # full indoor table mid-session
+P_CANVAS_PINE = "assets/gallery/canvas-northern-lights.jpg"  # finished northern-lights canvas held up
+P_ARTIST      = "assets/gallery/artist-painting-lavender.jpg"# Bravaura artist painting the lavender demo
+P_TENT_LAUGH  = "assets/gallery/lavender-tent-laughing.jpg" # Kendal mid-demo, table laughing, lavender rows behind
+P_BFLY_CANVAS = "assets/gallery/canvas-butterfly-ribbon.jpg" # finished butterfly-and-ribbon canvas on an easel
+P_PATIO       = "assets/gallery/patio-session.jpg"           # backyard gazebo session
+P_APRON       = "assets/gallery/apron-palette.jpg"           # Bravaura apron logo + palette close-up
+P_BFLY_PAINT  = "assets/gallery/painting-butterfly.jpg"      # guest painting her butterfly canvas
+P_HEADSHOT    = "assets/gallery/kendal-headshot.jpg"         # Kendal in the Bravaura apron with a palette
+P_DEMO        = "assets/gallery/kendal-demo.jpg"             # Kendal demonstrating at the easel
+P_TEAM_NOTE   = "assets/gallery/testimonial-team.jpg"        # 16:10 crop of the indoor table, for the team-building quote
+
+IMG_HERO      = P_LAV_FIELD     # home hero — real guests in the lavender field with their paintings
+IMG_SIP       = P_TENT_LAUGH    # paint & sip — Kendal mid-demo, guests laughing, lavender rows behind
+IMG_BIRTHDAY  = P_BUTTERFLY     # parties — real mixed-age group with their butterfly canvases
+IMG_CORP      = P_TABLE_GROUP   # team sessions — full indoor table mid-session
+IMG_FACE      = "bcb154fd-48ef-4029-8091-971b9a36416f"  # kids with painted faces (STILL AI — no real face-painting photo yet)
+IMG_MASTER    = P_INDOOR2       # lessons — real indoor session, focused work
 IMG_LAKE      = "67f4b7da-ed40-424c-ad49-760dd9087a33"  # ladies' lake night
 IMG_GALAXY    = "d24aa654-58f8-4c92-b876-176230ec11e6"  # kids' galaxy painting
-IMG_HEADSHOT  = "48da3559-305e-4e37-9839-494b5ac1ec61"  # Kendal hosting/instructing a painting class (AI-generated, matched to her likeness)
+IMG_HEADSHOT  = P_HEADSHOT  # real photo of Kendal in the Bravaura apron (replaced the AI headshot)
 
 def img_url(pid):
     if pid.startswith("http") or pid.startswith("assets/"):
@@ -69,9 +100,9 @@ FLYER_IMG   = "assets/olipop-paint-flyer.jpg"    # drop the flyer here; popup hi
 
 # ---------------------------------------------------------------- testimonials
 TESTIMONIALS = [
-    {"quote": "Bravaura turned my daughter's 8th birthday into the easiest party I've ever hosted. They brought everything, ran the whole painting activity, and packed it all up. I didn't lift a finger.", "author": "Jenna R.", "context": "Birthday Party, Cranford NJ"},
-    {"quote": "Booked a ladies' night on the lake and it was such a fun, relaxed evening. Great instruction for total beginners, and every canvas turned out great. Already planning the next one.", "author": "Kristine G.", "context": "Paint & Sip, Ladies' Night", "image": IMG_LAKE, "image_alt": "A Bravaura ladies' night paint & sip out on the lake"},
-    {"quote": "We had a great time. Bravaura took care of everything, and it was a great team bonding experience.", "author": "Keith P.", "context": "Team Building, Effluent Design"},
+    {"quote": "Bravaura turned my daughter's 8th birthday into the easiest party I've ever hosted. They brought everything, ran the whole painting activity, and packed it all up. I didn't lift a finger.", "author": "Jenna R.", "context": "Birthday Party, Cranford NJ", "image": P_BUTTERFLY, "image_alt": "A party group holding up the canvases they painted"},
+    {"quote": "Booked a ladies' night on the lake and it was such a fun, relaxed evening. Great instruction for total beginners, and every canvas turned out great. Already planning the next one.", "author": "Kristine G.", "context": "Paint & Sip, Ladies' Night", "image": P_LAV_WIDE, "image_alt": "A tent full of guests at a Bravaura paint & sip"},
+    {"quote": "We had a great time. Bravaura took care of everything, and it was a great team bonding experience.", "author": "Keith P.", "context": "Team Building, Effluent Design", "image": P_TEAM_NOTE, "image_alt": "A team painting together around one long table"},
 ]
 
 # ================================================================ CSS
@@ -225,6 +256,10 @@ p{margin:0 0 1.1rem}
 .svc:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--ink)}
 .svc-img{position:absolute;inset:0;z-index:0;background:linear-gradient(150deg,var(--tint),rgba(30,42,56,.9))}
 .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+/* Pin every service-card photo to the same 4:3 block. Kendal's real event photos are a mix of
+   portrait and landscape; without this a portrait shot makes its card ~250px taller than the
+   card beside it in the same bento row, which reads as a spacing bug. */
+.svc .svc-img{aspect-ratio:4/3;overflow:hidden;border-radius:12px}
 .svc:hover .svc-img img{transform:scale(1.07)}
 .svc::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.15),var(--tint) 118%);mix-blend-mode:multiply}
 .svc>*{position:relative;z-index:2}
@@ -1032,6 +1067,8 @@ home_body=f'''
   </div>
 </section>
 
+{testimonials_section()}
+
 {cta()}
 '''
 page("index.html","Bravaura LLC | Mobile Art Parties in New Jersey",
@@ -1211,7 +1248,27 @@ print("home + services done")
 # ================================================================ GALLERY
 # NOTE: Kendal's headshot and the celestial/"galaxy" painting were removed (looked too AI).
 # Add a fresh "kids holding up their paintings" shot here once generated/chosen.
-GALLERY=[(IMG_LAKE,"A ladies' night paint & sip on the lake")]
+GALLERY=[(P_LAV_FIELD,"Guests holding their finished paintings at a lavender farm paint & sip"),
+         (P_BUTTERFLY,"A group holding up their finished butterfly canvases"),
+         (P_TENT_LAUGH,"Guests laughing their way through a lavender farm paint & sip"),
+         (P_TENT_ROW,"A long table of painters under the tent at the lavender farm"),
+         (P_LAV_CANVAS,"A finished lavender canvas held up at the end of the night"),
+         (P_BFLY_CANVAS,"A finished butterfly and ribbon canvas from a fundraiser paint & sip"),
+         (P_APRON,"Mixing colors on the palette"),
+         (P_PATIO,"A backyard paint & sip under the gazebo"),
+         (P_BFLY_PAINT,"Working on the butterfly, brush by brush"),
+         (P_TABLE_GROUP,"An indoor paint & sip in full swing"),
+         (P_TENT_GOLDEN,"Our tent set up in the lavender field at golden hour"),
+         (P_LAV_TEACH,"Step-by-step instruction at every table"),
+         (P_CANVAS_PINE,"A finished northern lights canvas"),
+         (P_LAV_TABLE,"Painting together at the lavender farm"),
+         (P_ARTIST,"Painting the demo canvas guests follow along with"),
+         (P_DEMO,"Walking the room through the next step"),
+         (P_CANVAS_BIRD,"A finished canvas from a private session"),
+         (P_LAV_WIDE,"A full tent of painters at work"),
+         (P_INDOOR,"An in-home session in progress"),
+         (P_TABLE_SETUP,"Easels and canvases set up before guests arrive"),
+         (P_STUDIO,"Everything we bring with us")]
 def gallery_grid():
     items=""
     for pid,alt in GALLERY:
@@ -1221,7 +1278,7 @@ def gallery_grid():
     return f'<div class="gallery-grid{solo}">{items}</div>'
 gallery_body=f'''
 {page_hero("gallery","A peek at the paint",
-  "Moments from Bravaura events across New Jersey. We're adding fresh photos from recent parties, paint &amp; sip nights, and team sessions. Check back soon.",
+  "Real photos from real Bravaura events across New Jersey &mdash; lavender farm paint &amp; sip nights, private parties, and in-home sessions. Every canvas on this page was painted by a guest.",
   script="See the mess we make.", cta_btn=("Book your event","contact.html"))}
 <section class="section"><div class="container">{gallery_grid()}</div></section>
 {designs_section()}
