@@ -56,17 +56,25 @@ Main pics are CUSTOMER-focused (Kendal is NOT in them, by her request). Her real
 ## Email (already working)
 `kendal@bravaurallc.com` and `info@bravaurallc.com` forward to `bravaurallc@gmail.com` via Cloudflare Email Routing. (Receive/forward only; replies come from Gmail.)
 
-## Publishing / going live (NOT done yet)
-- Hosted on **Netlify**. Private preview: `main--bravaura-llc.netlify.app`. Public domain `bravaurallc.com` currently shows a **"Coming Soon"** page.
-- Live publishing pipeline: **edit files → push to GitHub → Netlify auto-publishes** (~1 min).
-- **TO DO:** confirm whether the local Website folder is linked to the GitHub repo. If not, set up **GitHub Desktop** pointed at the repo so Kendal can Commit + Push to publish. (Kendal's dad wants to teach her this — good idea.)
-- Note: a cloud Cowork session generally CANNOT push to GitHub itself; publishing is done from Kendal's computer (GitHub Desktop) or by someone with repo access.
+## Publishing / going live — DONE, this is the live pipeline
+- **THIS folder (`CoworkOS\\bravaura-website\\`) is the GitHub repo and the only one that publishes.**
+  Repo: `bravaurallc/bravaura-website`, branch `main`. Netlify watches it and rebuilds on every push.
+- **To publish:** open GitHub Desktop → it shows changed files → type a summary → **Commit to main** → **Push origin**. Live in ~1 min.
+- `CoworkOS\\Website\\` is the OLD working copy. It is retired and does NOT publish. A marker file
+  (`OLD-FOLDER-DO-NOT-EDIT.md`) sits inside it. Safe to delete once Kendal is sure.
+- Site went fully live on bravaurallc.com before 16 Sept 2026 (the earlier "Coming Soon" note was stale).
+- Caution: this repo lives inside Dropbox. Git + Dropbox can conflict if both sync at once. Moving it out
+  of Dropbox one day would be safer; it has been fine so far.
 
-## Open items
-- Publish to live when ready (set up / verify GitHub Desktop + repo link).
-- Set real prices when decided (replace "Custom quote").
-- Optional: swap AI photos for real event photos over time.
-- Optional: exact logo on the aprons (AI couldn't render it exactly; aprons are plain black in the photos).
+## Current state (16 Sept 2026)
+- Real event photos replaced the AI ones nearly everywhere: home hero, paint & sip, birthday, corporate,
+  master classes, About headshot, social share image, and a 23-photo gallery. Files in `assets/gallery/`.
+- Still AI on purpose: the 12 painted design mockups on the paint & sip page, and the face-painting photo
+  (no real face-painting shot exists yet).
+- Testimonials section (`testimonials_section()`) was written but never called on any page — it is now on
+  the home page, with a real photo per review.
+- `.svc .svc-img` is pinned to `aspect-ratio:4/3`. Kendal's real photos are a mix of portrait and landscape;
+  without this a portrait shot makes its bento card ~250px taller than its neighbour.
 
 ## How to edit (no credits)
 - Text: open the .html file in Notepad, Ctrl+F to find words, change them (don't delete the `<tags>`), save, refresh index.html.
