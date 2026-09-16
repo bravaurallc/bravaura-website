@@ -1248,26 +1248,17 @@ print("home + services done")
 # NOTE: Kendal's headshot and the celestial/"galaxy" painting were removed (looked too AI).
 # Add a fresh "kids holding up their paintings" shot here once generated/chosen.
 GALLERY=[(P_LAV_FIELD,"Guests holding their finished paintings at a lavender farm paint & sip"),
-         (P_BUTTERFLY,"A group holding up their finished butterfly canvases"),
-         (P_TENT_LAUGH,"Guests laughing their way through a lavender farm paint & sip"),
-         (P_TENT_ROW,"A long table of painters under the tent at the lavender farm"),
-         (P_LAV_CANVAS,"A finished lavender canvas held up at the end of the night"),
-         (P_BFLY_CANVAS,"A finished butterfly and ribbon canvas from a fundraiser paint & sip"),
-         (P_APRON,"Mixing colors on the palette"),
-         (P_PATIO,"A backyard paint & sip under the gazebo"),
-         (P_BFLY_PAINT,"Working on the butterfly, brush by brush"),
-         (P_TABLE_GROUP,"An indoor paint & sip in full swing"),
          (P_TENT_GOLDEN,"Our tent set up in the lavender field at golden hour"),
-         (P_LAV_TEACH,"Step-by-step instruction at every table"),
+         (P_BUTTERFLY,"A group holding up their finished butterfly canvases"),
+         (P_TENT_ROW,"A long table of painters under the tent at the lavender farm"),
+         (P_TENT_LAUGH,"Guests laughing their way through a lavender farm paint & sip"),
+         (P_BFLY_CANVAS,"A finished butterfly and ribbon canvas from a fundraiser paint & sip"),
+         (P_LAV_CANVAS,"A finished lavender canvas held up at the end of the night"),
          (P_CANVAS_PINE,"A finished northern lights canvas"),
-         (P_LAV_TABLE,"Painting together at the lavender farm"),
+         (P_APRON,"Mixing colors on the palette"),
          (P_ARTIST,"Painting the demo canvas guests follow along with"),
-         (P_DEMO,"Walking the room through the next step"),
-         (P_CANVAS_BIRD,"A finished canvas from a private session"),
-         (P_LAV_WIDE,"A full tent of painters at work"),
-         (P_INDOOR,"An in-home session in progress"),
-         (P_TABLE_SETUP,"Easels and canvases set up before guests arrive"),
-         (P_STUDIO,"Everything we bring with us")]
+         (P_LAV_TEACH,"Step-by-step instruction at every table"),
+         (P_TABLE_GROUP,"An indoor paint & sip in full swing")]
 def gallery_grid():
     items=""
     for pid,alt in GALLERY:
