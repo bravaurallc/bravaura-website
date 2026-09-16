@@ -55,7 +55,7 @@ P_TEAM_NOTE   = "assets/gallery/testimonial-team.jpg"        # 16:10 crop of the
 IMG_HERO      = P_LAV_FIELD     # home hero — real guests in the lavender field with their paintings
 IMG_SIP       = P_TENT_LAUGH    # paint & sip — Kendal mid-demo, guests laughing, lavender rows behind
 IMG_BIRTHDAY  = P_BUTTERFLY     # parties — real mixed-age group with their butterfly canvases
-IMG_CORP      = P_TABLE_GROUP   # team sessions — full indoor table mid-session
+IMG_CORP      = "2b45db44-9905-422b-b9c8-bde0577d8afd"  # coworkers painting (AI — Kendal preferred this over the real photo)
 IMG_FACE      = "bcb154fd-48ef-4029-8091-971b9a36416f"  # kids with painted faces (STILL AI — no real face-painting photo yet)
 IMG_MASTER    = P_INDOOR2       # lessons — real indoor session, focused work
 IMG_LAKE      = "67f4b7da-ed40-424c-ad49-760dd9087a33"  # ladies' lake night
@@ -1067,7 +1067,6 @@ home_body=f'''
   </div>
 </section>
 
-{testimonials_section()}
 
 {cta()}
 '''
