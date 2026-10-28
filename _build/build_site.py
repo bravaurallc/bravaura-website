@@ -877,7 +877,6 @@ def promo_popup():
       <p class="promo-note">A lavender-themed painting, step by step. All supplies included, plus a lavender sachet fresh from the farm. All ages, no experience needed.</p>
       <p class="promo-early">Early bird: 15% off with code <b>EARLYBIRD15</b> until Aug 23</p>
       {tickets}
-      <a href="#signup" class="{secondary_cls}">Get event updates</a>
     </div>
   </div>
 </div>'''
@@ -957,7 +956,6 @@ def page(filename,title,description,active,body,splash=False):
 <main>
 {body}
 </main>
-{signup_band()}
 {footer()}
 {promo_popup()}
 <script src="js/main.js"></script>
