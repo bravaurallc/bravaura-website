@@ -584,6 +584,9 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 .hero-photo--mini{right:auto;left:-6px;bottom:0}
 .hero-sticker{position:absolute;z-index:5;top:-30px;left:-6px;width:180px;height:180px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:18px;box-shadow:0 2px 10px rgba(36,18,58,.14);transform:rotate(-8deg)}
 .hero-sticker img{width:100%;height:auto}
+.events-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.events-photos .frame-photo{aspect-ratio:1/1}
+.events-photos .frame-photo:first-child{grid-column:1 / -1;aspect-ratio:16/10}
 @media(max-width:920px){.hero-sticker{width:130px;height:130px;padding:14px;top:-20px;left:0}}
 @media(max-width:920px){.hero-photo-wrap{padding:0 0 44px 20px}.hero-photo--mini{left:0}}
 .btn,.btn--gold,.btn--gold:hover{background:var(--purple);color:#fff;border-radius:var(--r-sm);box-shadow:none;background-size:auto}
@@ -1125,6 +1128,28 @@ home_body=f'''
         <p>Painting and drawing lessons for all ages. One-on-one, two or three together, or a small group. No minimum.</p>
         <span class="go">See master classes &rarr;</span>
       </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="events">
+  <div class="container split">
+    <div class="split-media reveal"><div class="events-photos">
+      <div class="frame-photo"><img src="assets/gallery/community-tent.jpg" alt="Kids lining up at the Bravaura tent at a local event" loading="lazy"></div>
+      <div class="frame-photo"><img src="assets/gallery/face-painting.jpg" alt="Face painting at a community event" loading="lazy"></div>
+      <div class="frame-photo"><img src="assets/gallery/vendor-table.jpg" alt="The Bravaura table at a community event" loading="lazy"></div>
+    </div></div>
+    <div class="reveal d1">
+      <span class="eyebrow">local events &amp; pop-ups</span>
+      <h2>Find us around New Jersey.</h2>
+      <p>We bring hands-on art to farms, markets, festivals, schools, camps, and community days. Face painting, quick crafts, and paint stations that keep a crowd busy and happy.</p>
+      <h3 style="font-size:1.1rem;margin-top:1.6rem">Where we&rsquo;ve been</h3>
+      <ul class="checklist">
+        <li>Olipop &amp; Paint Night at Livi&rsquo;s Lavender Farm, Robbinsville</li>
+        <li>Restore and Grow paint &amp; sip fundraiser, Keansburg</li>
+        <li>Murals &amp; Mocktails at the Community Wellness Center, Flemington</li>
+      </ul>
+      <div class="btn-row" style="margin-top:1.8rem"><a class="btn btn--gold" href="contact.html">Invite us to your event</a></div>
     </div>
   </div>
 </section>
