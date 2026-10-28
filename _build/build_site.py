@@ -1394,7 +1394,7 @@ about_body=f'''
     <div class="reveal d1">
       <span class="eyebrow">our story</span>
       <h2>Founded by Kendal Plumstead</h2>
-      <p>It started with a girl from New Jersey who loves art and loves teaching it even more. Kendal has a BA in Art Education and is certified K–12, and she teaches every age group, from little kids to adults. She also studied business at Indiana University&rsquo;s Kelley School of Business.</p>
+      <p>It started with a girl from New Jersey who loves art and loves teaching it even more. Kendal has a BA in Art Education from The College of New Jersey (TCNJ) and is certified K–12, and she teaches every age group, from little kids to adults. She also studied business at Indiana University&rsquo;s Kelley School of Business.</p>
       <p>She wanted art parties that didn't ask for a studio, any experience, or much planning. The name comes from two things she loves: theater, where "brava" is the cheer for a performance that lands, and "aura," the feeling a room carries. That's what she set out to build into every event.</p>
       <p>Most people who book us are sure they can't paint. Watching that change over the course of an evening is the reason this business exists.</p>
       <p class="mb-0">Celebrations shouldn't get buried in setup and cleanup, so we handle all of it. You pick the occasion. We bring the rest to your door.</p>
