@@ -580,6 +580,9 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 .hero-photo--mini{border-radius:var(--r);border:6px solid #fff;box-shadow:0 2px 10px rgba(36,18,58,.12);width:40%;right:-12px;bottom:0}
 .hero-badge{border-radius:var(--r-sm);box-shadow:0 1px 4px rgba(36,18,58,.12);top:14px;left:14px;font-size:.9rem}
 .hero-badge::before{box-shadow:none}
+.hero-photo-wrap{padding:0 0 48px 28px}
+.hero-photo--mini{right:auto;left:-6px;bottom:0}
+@media(max-width:920px){.hero-photo-wrap{padding:0 0 44px 20px}.hero-photo--mini{left:0}}
 .btn,.btn--gold,.btn--gold:hover{background:var(--purple);color:#fff;border-radius:var(--r-sm);box-shadow:none;background-size:auto}
 .btn:hover{transform:none;box-shadow:none;background:var(--purple-deep);color:#fff}
 .btn--white,.btn--white:hover{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
@@ -1059,7 +1062,6 @@ home_body=f'''
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <span class="hero-badge hero-badge--tl">we come to you &#10038;</span>
       <div class="hero-photo hero-photo--main"><img src="{img_url(IMG_HERO)}" alt="Kids proudly holding up their finished paintings at a Bravaura art party" loading="eager" onerror="this.closest('.hero-photo').classList.add('fail')"></div>
       <div class="hero-photo hero-photo--mini"><img src="{img_url(P_KID_FLOWER)}" alt="A young painter holding up her finished flower painting" loading="lazy" onerror="this.closest('.hero-photo').classList.add('fail')"></div>
     </div>
@@ -1363,7 +1365,7 @@ about_body=f'''
     <div class="reveal d1">
       <span class="eyebrow">our story</span>
       <h2>Founded by Kendal Plumstead</h2>
-      <p>It started with a girl from New Jersey who loves art and loves teaching it even more. Kendal has a BA in Art Education and is certified K–12, and she teaches every age group, from little kids to adults.</p>
+      <p>It started with a girl from New Jersey who loves art and loves teaching it even more. Kendal has a BA in Art Education and is certified K–12, and she teaches every age group, from little kids to adults. She also attended Indiana University&rsquo;s Kelley School of Business, which is why the booking, planning, and details behind every event run smoothly.</p>
       <p>She wanted art parties that didn't ask for a studio, any experience, or much planning. The name comes from two things she loves: theater, where "brava" is the cheer for a performance that lands, and "aura," the feeling a room carries. That's what she set out to build into every event.</p>
       <p>Most people who book us are sure they can't paint. Watching that change over the course of an evening is the reason this business exists.</p>
       <p class="mb-0">Celebrations shouldn't get buried in setup and cleanup, so we handle all of it. You pick the occasion. We bring the rest to your door.</p>
