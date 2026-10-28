@@ -582,6 +582,9 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 .hero-badge::before{box-shadow:none}
 .hero-photo-wrap{padding:0 0 48px 28px}
 .hero-photo--mini{right:auto;left:-6px;bottom:0}
+.hero-sticker{position:absolute;z-index:5;top:-18px;left:4px;width:118px;height:118px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:14px;box-shadow:0 2px 10px rgba(36,18,58,.14);transform:rotate(-8deg)}
+.hero-sticker img{width:100%;height:auto}
+@media(max-width:920px){.hero-sticker{width:92px;height:92px;padding:11px;top:-14px;left:0}}
 @media(max-width:920px){.hero-photo-wrap{padding:0 0 44px 20px}.hero-photo--mini{left:0}}
 .btn,.btn--gold,.btn--gold:hover{background:var(--purple);color:#fff;border-radius:var(--r-sm);box-shadow:none;background-size:auto}
 .btn:hover{transform:none;box-shadow:none;background:var(--purple-deep);color:#fff}
@@ -1062,6 +1065,7 @@ home_body=f'''
       </div>
     </div>
     <div class="hero-photo-wrap">
+      <span class="hero-sticker" aria-hidden="true"><img src="assets/bravaura-logo-final.png" alt=""></span>
       <div class="hero-photo hero-photo--main"><img src="{img_url(IMG_HERO)}" alt="Kids proudly holding up their finished paintings at a Bravaura art party" loading="eager" onerror="this.closest('.hero-photo').classList.add('fail')"></div>
       <div class="hero-photo hero-photo--mini"><img src="{img_url(P_KID_FLOWER)}" alt="A young painter holding up her finished flower painting" loading="lazy" onerror="this.closest('.hero-photo').classList.add('fail')"></div>
     </div>
