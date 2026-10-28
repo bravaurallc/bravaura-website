@@ -1345,7 +1345,6 @@ gallery_body=f'''
   "Real photos from real Bravaura events across New Jersey &mdash; lavender farm paint &amp; sip nights, private parties, and in-home sessions. Every canvas on this page was painted by a guest.",
   script="See the mess we make.", cta_btn=("Book your event","contact.html"))}
 <section class="section"><div class="container">{gallery_grid()}</div></section>
-{designs_section()}
 {cta(script_line="Want in?", heading="Your event could be up here next.", primary=("Book your event","contact.html"))}
 '''
 page("gallery.html","Gallery | Bravaura LLC Mobile Art Events NJ",
