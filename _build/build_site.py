@@ -582,9 +582,9 @@ h1,h2,h3,h4,.script-accent,.design-name{font-variation-settings:"SOFT" 0,"WONK" 
 .hero-badge::before{box-shadow:none}
 .hero-photo-wrap{padding:0 0 48px 28px}
 .hero-photo--mini{right:auto;left:-6px;bottom:0}
-.hero-sticker{position:absolute;z-index:5;top:-24px;left:0;width:150px;height:150px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:16px;box-shadow:0 2px 10px rgba(36,18,58,.14);transform:rotate(-8deg)}
+.hero-sticker{position:absolute;z-index:5;top:-30px;left:-6px;width:180px;height:180px;border-radius:50%;background:#fff;display:grid;place-items:center;padding:18px;box-shadow:0 2px 10px rgba(36,18,58,.14);transform:rotate(-8deg)}
 .hero-sticker img{width:100%;height:auto}
-@media(max-width:920px){.hero-sticker{width:112px;height:112px;padding:12px;top:-18px;left:0}}
+@media(max-width:920px){.hero-sticker{width:130px;height:130px;padding:14px;top:-20px;left:0}}
 @media(max-width:920px){.hero-photo-wrap{padding:0 0 44px 20px}.hero-photo--mini{left:0}}
 .btn,.btn--gold,.btn--gold:hover{background:var(--purple);color:#fff;border-radius:var(--r-sm);box-shadow:none;background-size:auto}
 .btn:hover{transform:none;box-shadow:none;background:var(--purple-deep);color:#fff}
